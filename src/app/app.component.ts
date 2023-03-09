@@ -15,13 +15,6 @@ export class AppComponent {
     this.numbersGenerated = new Array();
   }
 
-  // generateNumbers(){
-  //   var value = Math.floor((Math.random() * 1000) + 1);
-  //   console.log(value);
-  //   console.log(this.numbersGenerated);
-  //   this.numbersGenerated.push(value);
-  // }
-
   onGameStart(){
     console.log('onGameStart');
     this.interval = setInterval(()=>{

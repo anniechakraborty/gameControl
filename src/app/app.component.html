@@ -1,5 +1,11 @@
-<app-game-control (gameStart)="onGameStart()" (gameEnd)="onGameEnd()"></app-game-control>
-<div class="game" *ngFor="let num of numbersGenerated">
-    <app-odd-numbers *ngIf="num % 2 != 0" [numberEmitted]="num"></app-odd-numbers>
-    <app-even-numbers *ngIf="num % 2 == 0" [numberEmitted]="num"></app-even-numbers>
+<div class="game">
+    <mat-card class="body">
+        <app-game-control (gameStart)="onGameStart()" (gameEnd)="onGameEnd()"></app-game-control>
+        <div class="score">
+            <div *ngFor="let num of numbersGenerated">
+                <app-odd-numbers *ngIf="num % 2 != 0" [numberEmitted]="num"></app-odd-numbers>
+                <app-even-numbers *ngIf="num % 2 == 0" [numberEmitted]="num"></app-even-numbers>
+            </div>
+        </div>
+    </mat-card>
 </div>
